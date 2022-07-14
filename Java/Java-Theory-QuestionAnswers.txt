@@ -1,0 +1,202 @@
+1. What is Mutable Object ?
+	The object in which you can change the fields and states after the object is created is called as Mutable Object
+	Example: java.util.Date, StringBuilder, and etc.
+	
+2. What is Immutable Object ? 
+	The object in which you cannot change the fields and states after object is created is called immutable object
+	Example: Boxed primitive objects like Integer, Long and etc.
+	
+3. How to create mutable class ?
+	-> Create method to modify the field values
+	-> Create Getter and Setter methods
+	
+		public class student{
+			private String name;
+			
+			student(String name ){
+				this.name = name;
+			}
+			
+			public String getName(){
+				return this.name;
+			}
+			public void setName(String someName){
+				this.name = someName;
+			}
+		}
+		
+		public static void main(){
+			student collegeStudent = new student("Mohammed Tabrez")
+			
+			collegeStudent.setName("TAbrez Khan");
+			
+			System.out.println(getName())
+		}
+
+4. How to create an Immutable class ? 
+	-> The class should be declared as final
+	-> All the fields should be made private so that direct acess is not allowed
+	-> No setter Methods
+	-> Make all mutable final , So that it can be declared only once
+		
+		public class student{
+		private final String name;
+		
+		student(final String name ){
+			this.name = name;
+		}
+		
+		public String getName(){
+			return this.name;
+		}
+		public void setName(String someName){
+			this.name = someName;
+		}
+	}
+	
+5. Different ways to create a string ?
+	The string in java can be declared using two ways, below are the following
+	
+		-> String name = "Mohammed Tabrez"
+		
+		-> String name = new String("Mohammed Tabrez")
+		
+6. Why are strings immutalbe in Java ?
+	Java uses the concept of STRING LITERALS, considering an example, Where we have many reference variables
+	referring to a single object and if any one reference varialbe change the value of an object then all other
+	reference variables will also be affected	
+	
+	Other reasons are below as follows
+	
+		-> Immutable objects are simple
+		-> They require no synchronization
+		-> They are good building blocks for other objects
+		
+7. What are string functions ?
+	Java String class provides a lot of methods to perform operations on strings such as 
+	compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.
+	
+8. What is OOPS ?
+	As the name suggest, OOPS or Object Oriented Programming refers to language that uses Objects in thier programming.
+	They use Object as primary source to implement what is happen in the code.
+	
+		Pillars of OOPS 
+			-> Abstraction
+			-> Encapsulation
+			-> Inhertiance
+			-> Polymorphism
+	
+9. What is Abstraction ?
+	Data Abstraction is a property by virtue of which only the essential details are displayed to the user. The trivial or	
+	non-essential details are not displayed to the user. Ex - A car is displayed as car rather then displaying all its 
+	individual components
+	
+		-> Abstract class is a class that is declared with an abstract keyword
+		-> Abstract method is a method that is declared without its implementation
+		-> Abstract class may or maynot have all abstract methods, Some of them can also be concrete method
+		-> Abstrcat method must be redifined in the subclass
+		
+			abstract class Shape {
+				String color;
+			 
+				// these are abstract methods
+				abstract double area();
+				public abstract String toString();
+			 
+				// abstract class can have the constructor
+				public Shape(String color)
+				{
+					System.out.println("Shape constructor called");
+					this.color = color;
+				}
+			 
+				// this is a concrete method
+				public String getColor() { return color; }
+			}
+			
+			class Rectangle extends Shape {
+ 
+				double length;
+				double width;
+			 
+				public Rectangle(String color, double length,
+								 double width)
+				{
+					// calling Shape constructor
+					super(color);
+					System.out.println("Rectangle constructor called");
+					this.length = length;
+					this.width = width;
+				}
+			 
+				@Override double area() { return length * width; }
+			 
+				@Override public String toString()
+				{
+					return "Rectangle color is " + super.getColor()
+						+ "and area is : " + area();
+				}
+			}
+		
+10. Differecne between abstract class and interface
+	
+		-> An Interface can have only abstract methods and An Abstract class can have both abstract methods and non abstract methods
+		-> By default variables are final in Interface . An abstract class  may have non-final variables.
+		-> An abstract class can have final, non-final, static and non-static variable. An Interface can have only final and static variables
+		-> Abstract can provide implementation of interface but Interface cannot provide implementation of Abstract class
+		
+11. What is Encapsulation ?
+		Encapsulation is a process of wrapping data under a single unit. It is a mechanism that binds the code and data that it manipulates
+		
+		Technically in encaspsulation, A varialbe or data is hidden from other classes and can be acessed
+		only through any methods/functions of its own class in which they are declared
+		
+12. Polymorphism in Java ?
+		Polymorphism is a  concept in java by which you can perform a single in two different ways.
+		Ther are two types of Polymorphism in Java 
+			-> Runtime polymorphism
+			-> Complietime polymorphism
+		You can perform polymorphism using method overloadling and method overriding
+			
+13. What is RunTime polymorphism ?
+		Runtime polymorphism is a process in which a call to overridden method is resolved at runtime rather than compile time
+		
+		class Bike {
+			void run(){}
+		}
+		
+		class Splendor extends Bike{
+			void run(){
+				System.out.println("Ride carefullu")
+			}
+		}
+		
+14. Differecne between throw and throws ?
+		
+		-> Throw is a keyword in java which is used throw a exception manually. Using throw keyword you can throw a exception
+			from method or blocks
+			
+				class DoSomething{
+					void method(){
+						Exception e = new Exception();
+						throw e
+					}
+				}
+				
+		-> Throws is also an keyword in java, Which acts as method signature to indicate that this method may throw some exception
+		
+			void playBall() throws Exception{
+			
+			}
+		
+			
+
+		
+		
+		
+	
+
+	
+		
+	
+	
