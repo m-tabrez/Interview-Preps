@@ -189,6 +189,60 @@
 			
 			}
 		
+15. Differecne / Explanation of JDK, JRE, JVM ?
+	
+	-> JDK is a software development enviroment used for developing java applications and applets. It includes JRE, a interpreter,
+		a compiler, an archiver and other reqiured tools
+		
+	-> JRE Java Runtime Enviroment provides minimum requirement for executing a java application. JRE consists of JVM, Core classes
+		and other supporting files
+		
+	-> JVM is a very important part of both JDK and JRE because it is contained or inbuitl in both. What ever the program you run using	
+		JDK or JRE, JVM is reponsible for running the java program line by line, hence it is also called as interpreter
+		
+16. What is Treeset ?
+	Treeset is an important implementation of SortedSet Interface in Java that uses tree for storage. The elements are sorted in
+	natural ordereing whether or not an explicit comparatro is provided
+
+17. What is ArrayList ?
+	ArrayList is part of collection framework and its available in java.util.package. It provides us with dynamic Array.
+	Though it is slower compared to standard but its very helpful in programming as we require lot of manipulations in the arrays.
+
+18. Differecne between array list and linked list ?
+	ArrayList
+		-> This class uses dynamic array to store elements in it	
+		-> This class take more time for manipulation of data in it, Since when an item is removed the array is traversed and mem bits are shifted
+		-> This class implement list interface and acts as list
+		-> Best to use when only storing and acessing of data is required
+		
+	LinkedList
+		-> This class uses doubly linkedlist to store elements in it.
+		-> Manipulating of data takes less time compared to arra list
+		-> This class implement list interface and deque interface, Hence acts as both list and deque
+		-> Best to use when manipulation of data is required
+
+19. How to add and remove elements from an Array ?
+
+20. What is hashing ?
+
+21. Differecne between hashset and hashmap ?
+	
+	Hashset
+		-> Hashset is an implementation of Set Interface , Which does not allow duplicate values
+		-> Uses HashMap object for adding and storing mechanism 
+		-> It is compartively slower than hash map
+		-> Insertion Method is Add()
+		
+	HashMap
+		-> HashMap is an implementation of Map Interface, Which does not allow duplicate key but accetps duplicate values
+		-> Uses Hashing technique for adding and storing mechanism
+		-> It is compartively faster than hashset
+		-> Insertion method is Put()
+	
+	
+
+
+		
 			
 
 		
