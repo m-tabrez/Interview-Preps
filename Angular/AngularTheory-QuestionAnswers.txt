@@ -1,0 +1,122 @@
+1. What is Angular ? 
+	-> Angular is a typescript based open source Front End framework, that makes it easy to build scalable web applications
+	-> It is collection of well integrated libraries which provides features like routing, forms management and client server comm
+	-> A suite of developer tools to help you develop, build, test and update your code
+	
+2. Difference between Angular and AngularJS
+	AngularJS
+	-> It is based on Model View Controller Architecture, The view process the information available in the model and 
+		generated the output
+	-> Built using Javascript
+	-> Does not support mobile browsers
+	-> Less Managable compared to Angular 
+	-> Does not support dependeny injection
+	
+	Angular
+	-> This is based on Components and Directives
+	-> Angular is built using typescript
+	-> Support all the popular mobile browsers
+	-> It has better structure , eaiser to create, maintain and manage for large applications
+	-> Dependency injection is supported and an important feature of Angular
+	
+3. What is Typescript ?
+	-> Typescript is a superset of javascript, developed by Microsoft
+	-> Developed on top of Javascript where First you write a typescript code, which then compile into javascript using typescript complier
+	-> Provides you with optional types, classes, async await and many other features
+	
+4. What are key compoenents of Angular ?
+	-> Components
+	-> Modules
+	-> Templates
+	-> Services 
+	-> MetaData
+	
+	Components
+	-> Components are the basic building blocks of any Angular Applications, The component is defined using @Component decorator
+	-> Every component consists of three parts, A template to load the view of componet, A class to define logic, A stylesheet 
+	
+	Modules
+	-> Modules is the place where we can group components, service, directives and pipes. A module decides whether a compoenents,
+		directives etc can be other modules by exporting or hiding these elements.
+		
+	Services
+	-> A service is instantiated only one time during the lifetime of the Application
+	-> The main objective of the services is to share data, function among different components of the angular application
+	
+5. Dependency Injection in Angular ?
+	-> Dependency Injection is an important design pattern in Angular 
+	-> Dependencies are nothing but services which have functionality. Functionality can be required by various components and
+		directives in an application.
+	-> Angular provides a smooth mechanism to inject this dependency in our compoenents and directives
+
+6. What are pipes ?
+	Pipes are simple function used in template expression, that takes a value as input, then transform and returns into a desired output
+	Ex of Inbuilt Pipe -> Lowercase Pipe, Uppercase Pipe, Date, Currency Pipe
+	
+7. What is Async Pipe ?
+	Async Pipe subscribes to an observale or a Promise that returns the latest value to be emitted. Every time a new value is emitted ,
+	thie pipe asks the component to look for changes
+	
+8. Difference between pure pipe and Impure pipe ?
+	Pure Pipe
+	-> A pure pipe in angular is a pipe which executes when it detects a pure change in the input value
+	-> A pure change is when the changecycle detects a change in the either of primitve 
+		input value ( ex : String, Number, Boolean ) or 
+		object (ex: Array, Object, Functions )
+		
+	Impure pipe
+	-> An impure pipe is a pipe which executes when it detects an impure change in the input value
+	-> An impure change is when changecycle detects change in the composite object, Such as like adding element to an existing array
+	
+9. Directives in Angular ?
+	Custom directives adds behaviour to an existing DOM element or an existing component instance
+
+10. How are Observable different from promises ?
+	Promise
+	-> 
+
+11. What is Multicasting ?
+	-> Multicasting is a process of broadcasting to list of mulitple subscribers in a sinble exexcution.
+	-> With Multicasting observable, you dont register muliple listeners in the document, Instead re-use the first listeners and
+		and send values out to each subscriber
+
+12. What is Reactive Programming ?
+
+13. Features of RXJS ?
+
+14. Difference between AOT and IOT ?
+	AOT
+	-> Ahead of Time Compiler
+	-> Application compiles during the build time
+	-> Since the application compiles before running in the browser, the browser loads the executable code and renders the application
+		immediatley, which leads to fast rendering
+		ng build --aot or ng serve --aot
+	
+	JIT
+	-> Just Intime Compiler
+	-> Application is compiled in the browser during the run time
+	-> By default angular builds and serves the application using JIT compiler
+		ng build or ng serve
+
+15. Data Binding in Angular ?
+	-> String Interpolation - {{ someVarName }}
+	-> Property Binding - <h1 [disabled]=""></h1>
+	-> Attribute Binding
+	-> Event Binding
+	-> Two way data binding
+
+16. Angular Life Cycle Hooks ?
+	-> ngOnChanges - This method/hook is called before ngOnInit and whenever the property of a component changes
+	-> ngOnInit - This is called only once after onOnChanges, It initializes the component and sets input property of component
+	-> ngDoCheck - This is called after ngOnChanges and ngOnInit is used to detect and act on changes that cannot be detected by Ang
+	-> ngAfterContentInit - This is called after first ngDoCheck hook
+	-> ngAfterContentChecked
+	-> ngAfterViewInit
+	-> ngAfterViewChecked
+	-> ngOnDestroy
+	
+	
+		
+	
+	
+	

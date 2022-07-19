@@ -1,0 +1,5 @@
+1. Difffernce between Virtual Dom and Real Dom ?
+	
+	Virtual Dom
+		-> Changes can be made easily
+		-> Minimal memory storage
