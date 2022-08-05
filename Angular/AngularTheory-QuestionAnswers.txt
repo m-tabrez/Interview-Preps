@@ -73,7 +73,14 @@
 
 10. How are Observable different from promises ?
 	Promise
-	-> 
+	-> Promise handles single event when an async operation completed or fails
+	-> There are third pary libraries that supports cancellation but ES6 promise doesn't support so far
+	
+	Observable
+	-> An Observable is like a stream and can pass one or many events for whenever a call back function is called for each event
+	-> Often Observable is preferred over promise because it features of promise and more
+	-> Observalbe has an added feature over promise to cancel the subscription with unsubscribe method/hook
+	-> Observable provides operators like map, foreach and reduce
 
 11. What is Multicasting ?
 	-> Multicasting is a process of broadcasting to list of mulitple subscribers in a sinble exexcution.
@@ -83,6 +90,19 @@
 12. What is Reactive Programming ?
 
 13. Features of RXJS ?
+	-> Observable 
+	
+	-> Observer - Observer is like a object with next(), error() and complete() methods which can be called when there is an
+		interaction with Observable
+		
+	-> Subscription - When the observable is created, It is called automatically and subscription is the method which calls the Observable
+	
+	-> Operator
+	
+	-> Subject - Subject is an Observable that can multicast and talk to many observers
+	
+	-> Schedulers
+	
 
 14. Difference between AOT and IOT ?
 	AOT
@@ -114,6 +134,18 @@
 	-> ngAfterViewInit
 	-> ngAfterViewChecked
 	-> ngOnDestroy
+	
+17. Difference between FormGroup and FormArray ?
+	FormGroup - Aggregates the value of each child FormControl into one object , with control name as the key
+	FormArray - Aggregates the value of each child FormControl into an Array
+
+18. Lazy Loading in Angular ?
+	Lazy loading is a technique or called as design pattern which allows you to load the modules particulary when you need the module
+	-> Create a Modules along with routing file for that module
+	-> Create two components
+	-> Use Module in Lazy Loading way
+	-> Create Routing links
+	
 	
 	
 		

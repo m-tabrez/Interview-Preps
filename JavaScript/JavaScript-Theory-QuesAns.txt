@@ -1,0 +1,162 @@
+1. What is hoisting ?
+	Hoisting is a default behaviour of javascript moving all the function declaration and variables to top of its scopes,
+	prior to execution of the code OR
+	
+	
+2. What is Closure ?
+	An inner function getting access to the scope of outer function, In javascript closures are created everytime a function
+	is created
+	-> Function along with its Lexical Scope forms a Closure
+	-> Whenever a function is returned even if it is vanished in execution context but still it remembers the reference it was 
+		pointing to, Its not just the function is returned but the entire closure
+	
+3. How Javascript works ?
+	-> Javascript is a Synchronous single-threaded language
+	-> Everything in javascript happens in a execution context
+	-> Execution context is like a big box which has two components
+	
+		1. Memory Component (also called as Variable Enviroment)
+			All the variable and functions are stored here as a key value pair
+		
+		2. Code Component ( also called as thread of execution )
+			Here Code is executed as oneline at a time
+			
+4. How Javascript code is executed ?
+
+	Example Code :	
+	var n = 2;
+	function square(num){
+		var ans = num * num;
+		return ans;
+	}
+	var square2 = square(n);
+	var square4 = square(4);
+	
+	Considering the Above Code :
+	-> Global Execution context is created ( Its like a big box, which has two components called as Memory Component and Code Component)
+		
+		Memory Component:
+		-> On the First Phase it will allocate memory to all variables and functions
+			n : undefined
+			square : Copies the entire function
+			square2 : undefined
+			square4 : undefined
+			
+		Code Execution :
+		-> On the Second Phase in code execution, It will again run the entire program line by line
+		-> At line line 1 , Javascript assigns 2 as the value to variable n;
+		-> Then starting from line 2 - 5, There is nothing for Javascript to do, Becuase here function is only written , No command to execute it
+		-> Then to next line [square2], The function is called and a new execution context is created for that function, which again has	
+			its memory component(allocating memory for variables and functions) and code component(runs the code line by line)
+		-> Javascript runs the logic and returns the control as mentioned in the code
+		
+5. What is Call Stack ?
+	Call Stack maintains the order of execution of execution context
+	
+6. Differene between undefined and not defined ?
+	In Javascript, they both are related to memory space and there is a very simple difference between them.
+	If the variable which is being acessed doesnt exist in the memory space , then it would be not defined
+	And if the variable is availabe in memory space but has not assigned any value till now, then it will be undefined
+	
+7. What is Scope or Lexical Enviroment ?
+	Scope determines the accessibility of variables, objects, and functions from different parts of the code.
+	Lexical Enviroment is created whenever a Execution Context is created
+	Lexical Enviroment is local memory + reference to lexical enviroment of (lexical) parent 
+	
+8. Differene between let, const and var ?
+	-> Just as like var, let and const are also hoisted but due to Temporal Dead Zone , We cannot use them before initialization
+	-> Temporal Dead Zone is time taken between declaration of a variable to assigning a value to it
+	-> Javascript uses different memory space for storing let and const . Var is stored in global Execution
+	
+9. What is Block and Shadowing ?
+	Code inside curly bracket is called block. Multiple statements are grouped inside a block so it can be written where
+	JS expects single statements like in if, else, loop, function etc.
+	Block values are stored inside separate memory than global. They are stored in block. (the reason let and const are called block scope)
+	Shadowing of variables using var, let and const.
+	
+10. How to use Strict Mode ?
+
+11. About Functions ?
+	Differene between the function statement and function expression is hoisting, So considering the below two functions
+	
+	statement();
+	expression();
+	
+	Output will be something like 
+	Some Thing
+	EXPRESSION IS NOT A FUNCTION. [Becuase global execution context considers expression as variable at first and the function is assigned 
+		only during code execution phase]
+	
+	Function Statement also called as Function Declaration :
+		function statement(){
+			console.log("Some Thing");
+		}
+		
+	Function Expression :
+		var expression = function(){
+			console.log("This is called function expression");
+		}
+		
+	Anonymous Function:
+		Anonymous Function are those function without names,
+		
+		Anonymous functions are used on place, where functions are used as values
+		Example - var anonymousFun = function(){
+		
+					}
+					
+	Named Function Expression :
+		var nameFunctionExpr = function xyz(){
+			console.log("This is called as Named Function Expression");
+		}
+		
+12. Differene between Parameters and Arguments
+	[The lables or Identifires which get those values are known are Parameters]
+	function addition(num1, num2){ 
+		let sum = num1 + num2;
+		return sum;
+	}
+	
+	addition(5, 10); - The values which we pass inside a function are known as Arguments
+	
+13. What is First Class Function ?
+	The ability of functions to be used as values and can be passed this as argument to another function and can be returned 
+	from the function defines function as First Class FUNCTION
+	
+14. What is Call back function ?
+	Functions that is passed as an argument to another function is called as Call Back Function.
+	Ex - SetTimeout( function(){
+					
+					}, 5000)
+				
+					document.getElementById("myButton")
+						.addEventListener("click", function(){
+			
+										})
+										
+					function xyx(getFunctionAsPara){
+						getFunctionAsPara();
+					}
+					
+					xyx(function(){
+					
+					})
+					
+15. Local Storage, Session Storage and Cookies ?
+
+16. What is Prototypes ?
+
+17. Traditional way of creating a object in Javascript ?
+
+18. Event Loop ?
+
+19. 
+					
+
+					
+												
+				
+	
+	
+	
+	
