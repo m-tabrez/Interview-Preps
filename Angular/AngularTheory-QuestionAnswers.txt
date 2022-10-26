@@ -75,6 +75,10 @@
 	Promise
 	-> Promise handles single event when an async operation completed or fails
 	-> There are third pary libraries that supports cancellation but ES6 promise doesn't support so far
+	const getUsers = new Promise( (res, rej) => {
+		res(
+	})
+	getUsers.then()
 	
 	Observable
 	-> An Observable is like a stream and can pass one or many events for whenever a call back function is called for each event
@@ -104,7 +108,7 @@
 	-> Schedulers
 	
 
-14. Difference between AOT and IOT ?
+14. Difference between AOT and JIT ?
 	AOT
 	-> Ahead of Time Compiler
 	-> Application compiles during the build time
@@ -119,11 +123,16 @@
 		ng build or ng serve
 
 15. Data Binding in Angular ?
+	Data Binding deals with how to bind your data from component to HTML DOM elements(templates)
 	-> String Interpolation - {{ someVarName }}
 	-> Property Binding - <h1 [disabled]=""></h1>
 	-> Attribute Binding
 	-> Event Binding
 	-> Two way data binding
+	
+16. Two Way Data Binding ?
+	Two-way binding gives components in your application a way to share data. Use two-way binding to listen for events and update 
+	values simultaneously between parent and child components
 
 16. Angular Life Cycle Hooks ?
 	-> ngOnChanges - This method/hook is called before ngOnInit and whenever the property of a component changes
@@ -146,7 +155,30 @@
 	-> Use Module in Lazy Loading way
 	-> Create Routing links
 	
+19. What is Behaviour Subject ?
+	Behaviour subject is a special type of Observable, which passes both the previous and current value
 	
+	It needs an initial value as it must always return a value on subscription even if it hasn't received a next()
+	Upon subscription, it returns the last value of the subject. 
+	
+20. What is Angular Guard ?
+	Angular Route Guards are interfaces provided by Angular which when implemented allows us to control the accessbility of routes 
+	based on conditions provided in class implementation
+	
+
+21. What is the use of Package.json file ?
+	-> Package.json is the heart of any  Node Project.
+	-> It records important metadata about the project which is required before publishing to NPM
+	-> And also defines functional attributes of the project that npm uses to install dependencies, run dependencies and identify entry point
+
+22. Flow of Angular Project ?
+	-> angular.JSON
+	-> main.ts
+	-> app.module.ts
+	-> app.component.ts
+	-> index.html
+	-> app.component.html
+ 
 	
 		
 	

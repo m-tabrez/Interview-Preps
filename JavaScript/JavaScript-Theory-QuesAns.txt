@@ -2,7 +2,6 @@
 	Hoisting is a default behaviour of javascript moving all the function declaration and variables to top of its scopes,
 	prior to execution of the code OR
 	
-	
 2. What is Closure ?
 	An inner function getting access to the scope of outer function, In javascript closures are created everytime a function
 	is created
@@ -67,6 +66,7 @@
 	-> Just as like var, let and const are also hoisted but due to Temporal Dead Zone , We cannot use them before initialization
 	-> Temporal Dead Zone is time taken between declaration of a variable to assigning a value to it
 	-> Javascript uses different memory space for storing let and const . Var is stored in global Execution
+	-> let can be updated within its scope but const can neither be updaed nor redeclared
 	
 9. What is Block and Shadowing ?
 	Code inside curly bracket is called block. Multiple statements are grouped inside a block so it can be written where
@@ -79,8 +79,8 @@
 11. About Functions ?
 	Differene between the function statement and function expression is hoisting, So considering the below two functions
 	
-	statement();
-	expression();
+	statement(); function doSomething(){}
+	expression(); let doSomething = function(){}
 	
 	Output will be something like 
 	Some Thing
@@ -143,14 +143,85 @@
 					})
 					
 15. Local Storage, Session Storage and Cookies ?
+	Local Storage -
+	-> Local Storage has storing capacity of upto 10 MB
+	-> Local Storage never expires, unitl we write a delete logic or delete manually
+	-> No data transfer to server
+	-> Syntax - localStorage.setItem('key','values')
+	
+	Session Storage
+	-> Session Storage has storing capacity of upto 5MB
+	-> Its session based and works per window or tab
+	-> As soon as the user visits the web app, the session is started and the data store in session is persisted only till the windows
+	-> No data transfer to server
+	
+	Cookies
+	
+	
+	
 
 16. What is Prototypes ?
+	-Every Object in Javascript has buitin property, which is called its prototype 
+	-Using protoype, we can add new method and variables to the existing object
+	-No matter how many objects you create, functions are loaded only once into the memory
 
 17. Traditional way of creating a object in Javascript ?
 
-18. Event Loop ?
+18. Call(), Apply() and Bind() ?
 
-19. 
+	Call() - Allows you to borrow functions with different objects
+	Ex : 
+	printFullName(someParaOptional){
+		console.log(this.firstName +' '+ this.lastName +' '+ someParaOptional)
+	}
+	let name = {
+		firstName : 'Mohammed',
+		lastName : 'Tabrez',
+	}
+	printFullName.call(name, 'vellore')
+	
+	Apply - The only difference with apply method is the way we pass arguments 
+	Ex : 
+	
+	Bind - Bind will create a copy of that function. We can so store it in a variable so that it can be called later.
+	
+	
+
+19. Object Destructruing ?
+	let student = {
+		name : "Tabrez",
+		age : "29",
+		email : "tabrez@gmail.com"
+	}
+	
+	let { name } = student;
+	
+20. Array Destructruing ?
+	const hobbies = ["Music", "Movies", "Reading", "Playing"];
+	let [hobby1, hobby2] = hobbies;
+	OUTPUT = hobby1 - Music AND hobby2 - Movies
+	
+21. What is Higer ordre function?
+	A function that takes a function as paramenter and/or returns a function
+	
+22. What is Web API ?
+	-> The features which are provided by the browser to be used along with our javascript code are considered as Web API's
+	Example :
+		-> setTimeout( ()=> {}, 5000)
+		-> Dom API (like document.getElementById/getElementByClassName)
+		-> Local Storage
+		-> Console
+		-> Location
+		-> fetch()
+		
+23. What is Event Loop ?
+	1. Browser has superpowers that are lent to JS engine to execute some tasks, these superpowers include web API's such as console, location, DOM API, setTimeout, fetch, local storage.
+	2. Callback functions and event handers are first stored in Web API environment and then transferred to callback queue.
+	3. Promises and mutation observer are stored in API environment and then transferred to microtask queue.
+	4. Event loop continuously observes call stack and when it is empty it transfers task to call stack.
+	5. Micro task is given priority over callback tasks.
+	6. Too many micro tasks generated can cause Starvation (nit giving time to callback tasks to execute).
+	
 					
 
 					

@@ -1,5 +1,65 @@
-1. Difffernce between Virtual Dom and Real Dom ?
-	
-	Virtual Dom
-		-> Changes can be made easily
-		-> Minimal memory storage
+What is ReactJS ?
+-> React is a javascript library created for building fast and interactive user interfaces for both mobile and web applications
+-> It is an open source, component based Front End Library responsible only for Application View Layer
+
+How ReactJS works ?
+-> React uses virtual DOM that is basically a node like structure of real DOM in Javascript
+-> So when it needs to read or write in DOM, it will use virtual representation of it
+-> Then the virtual DOM will find the most efficent way to update the browsers DOM
+
+What are React components?
+-> Components are the basic building blocks of any react applications. A typical react application will have many of these components
+-> Simply put, A javascript class or a function that optionally accepts inputs as props and returns a React Element that defines how
+	a User Interface should look like
+-> A react component can either be of Stateful Component or Stateless Component
+-> Stateful component are of class type and Stateless component are of Function type
+
+What is JSX ?
+-> JSX (Javascript Extension) allows us to write HTML element in javascript and place them in DOM without any createElemen()/appendChild()
+
+What are pure components in React ?
+-> Pure component in React are components which do not re-render when the value of state and props are update with the same values.
+-> Pure Component restricts re-rendering ensuring higher performance of the component
+	Advantages
+	->Prevents re-rendering of Component if props or state is the same
+	->Takes care of shouldComponentUpdate() implicitly
+
+What is Higher Order Components in React ?
+-> A Higher Order Component is a function that takes a Component in props and returns a new Component
+-> It is and advanced technique in ReactJS for re-using component logic
+
+How to setup Lazy Loading in React ?
+-> React.lazy() is a function that lets you load components lazily through what is called code splitting without help from any
+   external libraries
+   
+
+List some Advantages of React ?
+-> It relies on Virtual DOM to know what is really changing in UI and will only what has really changed, giving better performance
+-> JSX makes the component block code readable
+-> React data binding establishes conditons for creating dynamic application
+-> Component concept helps re-usability
+
+How to put React in Production mode ?
+
+
+How to add custom DOM attributes in JSX?
+
+What is the difference between Component and Container in React?
+
+What are functional components in react?
+
+What are class components in react?
+
+What is the recommended ordering of methods in class component?
+
+Differentiate between stateful and stateless components?
+
+What are the different phases of React component lifecycle?
+
+		
+
+When to use Pure Component over Component ?
+
+
+
+What is Props in React ?
