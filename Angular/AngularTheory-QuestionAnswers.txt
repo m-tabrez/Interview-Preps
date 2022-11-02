@@ -70,6 +70,14 @@
 	
 9. Directives in Angular ?
 	Custom directives adds behaviour to an existing DOM element or an existing component instance
+	-> Attribute Directives
+		ngClass
+		ngStyle
+		
+	-> Structural Directives
+		ngFor
+		ngIf
+		ngSwitch
 
 10. How are Observable different from promises ?
 	Promise
